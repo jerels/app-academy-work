@@ -9,3 +9,20 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+(async () => {
+  const url = 'https://polar-beach-08187.herokuapp.com/api/pets/2';
+  const res = await fetch(url);
+
+  if (res.ok) {
+    const pet = await res.json();
+    console.log(pet);
+
+    ReactDOM.render(
+      <React.StrictMode>
+        <App pet={pet} />
+      </React.StrictMode>,
+      document.getElementById('root')
+    );
+  }
+})();
