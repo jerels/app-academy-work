@@ -16,7 +16,6 @@ ReactDOM.render(
 
   if (res.ok) {
     const pet = await res.json();
-    console.log(pet);
 
     ReactDOM.render(
       <React.StrictMode>
