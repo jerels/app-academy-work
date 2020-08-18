@@ -1,0 +1,17 @@
+{
+  "name": "unit-problem-class-inheritance-a-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "class-inheritance-a.js",
+  "scripts": {
+    "test": "mocha",
+    "test-with-json": "mocha --reporter json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}

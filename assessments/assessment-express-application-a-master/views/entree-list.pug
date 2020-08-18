@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Document
+	body
+		table
+			thead: tr
+				th Name
+				th Description
+				th Price
+				th Type of Entree
+				th Vegetarian?
+			tbody
+				each entree in entrees
+					tr
+						td= entree.name
+						td= entree.description
+						td= entree.price
+						td= entree.EntreeType.name
+						td= entree.EntreeType.isVegetarian

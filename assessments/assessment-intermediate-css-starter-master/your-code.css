@@ -1,0 +1,72 @@
+body {
+    font-family: "Arial";
+}
+
+.red-rectangle {
+    height: 25px;
+    width: 50px;
+    border: solid 3px #FF0000;
+    background-color: #FF9999;
+    box-sizing: border-box;
+}
+
+.outer-layer-3 {
+    position: relative;
+}
+
+.black-box {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+}
+
+.yellow-box {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    position: relative;
+    bottom: 35px;
+    left: 5px
+}
+
+.black-box,
+.yellow-box {
+    box-sizing: border-box;
+}
+
+.outer-layer-4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.outer-layer-5 > p {
+    text-transform: uppercase;
+}
+
+.inner-layer-6 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.outer-layer-7 {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+}
+
+.outer-layer-8 {
+    overflow: hidden;
+}
+
+.outer-layer-9 a {
+    display: inline-block;
+    padding: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.box-10.purple-10 {
+    border: solid 3px yellow;
+}

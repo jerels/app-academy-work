@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "express_assessment_app",
+    "password": "3GsLEDYhcCi4WJ8y",
+    "database": "express_assessment_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  }
+}

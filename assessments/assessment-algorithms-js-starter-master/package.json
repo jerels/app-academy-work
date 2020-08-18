@@ -1,0 +1,20 @@
+{
+  "name": "week-7-assessment-project-solution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-ciruclar-queue.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1"
+  }
+}
