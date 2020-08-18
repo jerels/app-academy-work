@@ -1,7 +1,8 @@
 import React from 'react';
+import PetDetailList from './PetDetailList';
 
 const PetDetails = props =>
-    <div></div>
+    <PetDetailList pet={props.pet} />
     ;
 
 export default PetDetails;
