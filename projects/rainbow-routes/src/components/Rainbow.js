@@ -13,6 +13,10 @@ const Rainbow = () => (
             <Route path='/green' component={Green} />
             <Route path='/blue' component={Blue} />
             <Route path='/violet' component={Violet} />
+            <Link to='/red'>Red</Link>
+            <Link to='/green'>Green</Link>
+            <Link to='/blue'>Blue</Link>
+            <Link to='/violet'>Violet</Link>
         </div>
     </div>
 );
