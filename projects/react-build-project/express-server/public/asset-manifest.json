@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c73cb05f.chunk.css",
+    "main.js": "/static/js/main.07f58000.chunk.js",
+    "main.js.map": "/static/js/main.07f58000.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.83a27b56.js",
+    "runtime-main.js.map": "/static/js/runtime-main.83a27b56.js.map",
+    "static/js/2.cf67a1cd.chunk.js": "/static/js/2.cf67a1cd.chunk.js",
+    "static/js/2.cf67a1cd.chunk.js.map": "/static/js/2.cf67a1cd.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.adf818b35c94363a0acd92df9165aa30.js": "/precache-manifest.adf818b35c94363a0acd92df9165aa30.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c73cb05f.chunk.css.map": "/static/css/main.c73cb05f.chunk.css.map",
+    "static/js/2.cf67a1cd.chunk.js.LICENSE.txt": "/static/js/2.cf67a1cd.chunk.js.LICENSE.txt",
+    "static/media/Image.css": "/static/media/mushLadies.b39b36ce.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83a27b56.js",
+    "static/js/2.cf67a1cd.chunk.js",
+    "static/css/main.c73cb05f.chunk.css",
+    "static/js/main.07f58000.chunk.js"
+  ]
+}
