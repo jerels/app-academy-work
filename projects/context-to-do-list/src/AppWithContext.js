@@ -15,6 +15,7 @@ class AppWithContext extends React.Component {
     }
 
     createTask = task => {
+        debugger;
         const nextTaskId = new Date().getDate();
         const newTask = {
             [nextTaskId]: {
