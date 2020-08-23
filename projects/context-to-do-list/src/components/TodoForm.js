@@ -12,13 +12,12 @@ class TodoForm extends React.Component {
 
     handleInputChange = e => {
         this.setState({ inputValue: e.target.value });
-        e.target.value = this.state.inputValue;
     }
 
     handleSubmit = e => {
-        debugger;
         e.preventDefault();
         this.props.createTask(this.state.inputValue);
+        e.target.value = e.target.placeholder;
     }
 
     render() {
