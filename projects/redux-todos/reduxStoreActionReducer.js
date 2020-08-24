@@ -40,3 +40,10 @@ const tasksReducer = (state = [], action) => {
 };
 
 const store = createStore(tasksReducer);
+
+module.exports = {
+    store,
+    createTask,
+    deleteTask,
+    resetTaskList
+}
