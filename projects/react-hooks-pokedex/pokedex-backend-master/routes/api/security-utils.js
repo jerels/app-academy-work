@@ -15,8 +15,9 @@ function generateToken(player) {
 }
 
 function restorePlayer(req, res, next) {
+  console.log('in restore player!!');
   const { token } = req.cookies;
-
+  console.log('token: ', token);
   if (!token) {
     return next({ status: 401, message: 'no token' });
   }
@@ -29,19 +30,19 @@ function restorePlayer(req, res, next) {
     }
 
     const tokenId = payload.jti;
-
+    console.log('token id: ', tokenId);
     try {
       req.player = await PlayerRepository.findByTokenId(tokenId);
     } catch (e) {
       res.clearCookie("token");
       return next({ status: 401, message: "user not found" });
     }
-
+    console.log('req player', req.player);
     if (!req.player.isValid()) {
       res.clearCookie("token");
       return next({ status: 401, message: 'session not found' });
     }
-
+    console.log('end of restore player!!');
     next();
   });
 }

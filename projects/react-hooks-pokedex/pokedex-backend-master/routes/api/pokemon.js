@@ -15,8 +15,10 @@ const name = check('name').notEmpty();
 const type = check('type').notEmpty().isIn(types);
 const moves = check('moves').isArray();
 
-router.get('/', authenticated, asyncHandler(async function(_req, res) {
+router.get('/', authenticated, asyncHandler(async function (_req, res) {
+  console.log('in the get!!!');
   const pokemon = await PokemonRepository.list();
+  console.log(pokemon);
   res.json(pokemon);
 }));
 
@@ -46,7 +48,7 @@ router.get('/types', authenticated, asyncHandler(async function (_req, res) {
   res.json(types);
 }));
 
-router.get('/:id', authenticated, asyncHandler(async function(req, res) {
+router.get('/:id', authenticated, asyncHandler(async function (req, res) {
   const pokemon = await PokemonRepository.one(req.params.id);
   res.json(pokemon);
 }));
