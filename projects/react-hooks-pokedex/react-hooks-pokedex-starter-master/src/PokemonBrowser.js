@@ -5,7 +5,7 @@ import LogoutButton from './LogoutButton';
 
 const PokemonBrowser = props => {
   const { pokemon } = props;
-
+  debugger;
   if (!pokemon) return null;
 
   return (

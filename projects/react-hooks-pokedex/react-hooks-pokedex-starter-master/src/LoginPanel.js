@@ -5,7 +5,7 @@ const LoginPanel = props => {
   const [email, setEmail] = useState('demo@example.com');
   const [password, setPassword] = useState('password');
   const [currentUserId, setUserId] = useState(null);
-
+  debugger;
   const handleSubmit = async e => {
     e.preventDefault();
     const response = await fetch(`/api/session`, {

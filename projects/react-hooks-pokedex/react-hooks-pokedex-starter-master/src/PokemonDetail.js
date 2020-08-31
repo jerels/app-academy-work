@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const PokemonDetail = props => {
   const [pokemon, setPokemon] = useState(null);
   const id = props.match.params.id;
-
+  debugger;
   useEffect(() => {
     const loadPokemon = async () => {
       const res = await fetch(`/api/pokemon/${id}`);
