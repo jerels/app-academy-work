@@ -56,3 +56,11 @@ class MenuItemType(db.Model):
     name = db.Column(db.String(20), nullable=False)
 
     items = db.relationship('MenuItem')
+
+
+class Table(db.Model):
+    __tablename__ = 'tables'
+
+    id = db.Column(db.Integer, primary_key=True)
+    number = db.Column(db.Integer, nullable=False, unique=True)
+    capacity = db.Column(db.Integer, nullable=False)
