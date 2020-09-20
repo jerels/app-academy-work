@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import ForeignKey
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -31,7 +32,7 @@ class Menu(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30), nullable=False)
 
-    items = relationship('MenuItem', back_populates='menus')
+    items = db.relationship('MenuItem')
 
 
 class MenuItem(db.Model):
@@ -40,11 +41,12 @@ class MenuItem(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     price = db.Column(db.Float, nullable=False)
-    menu_id = db.Column(db.Integer, nullable=False, ForeignKey('menu.id'))
-    menu_type_id = db.Column(db.Integer, nullable=False, ForeignKey('menu_type.id'))
+    menu_id = db.Column(db.Integer, ForeignKey('menus.id'), nullable=False)
+    menu_type_id = db.Column(db.Integer, ForeignKey(
+        'menu_item_types.id'), nullable=False)
 
-    menu = relationship('Menu', back_populates='menu_items')
-    type = relationship('MenuItemType', back_populates='menu_items')
+    menus = db.relationship('Menu')
+    type = db.relationship('MenuItemType')
 
 
 class MenuItemType(db.Model):
@@ -53,4 +55,4 @@ class MenuItemType(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), nullable=False)
 
-    items = relationship('MenuItem', back_populates='menu_item_types')
+    items = db.relationship('MenuItem')
