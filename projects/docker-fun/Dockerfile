@@ -1,1 +1,3 @@
-FROM node:11.0.0-alpine
+FROM node:12.18.3-alpine
+WORKDIR /app
+COPY server.js /app
