@@ -1,10 +1,11 @@
-FROM ubuntu
+FROM node:10-alpine
 
-ADD . /app
+EXPOSE 3000
 
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y nodejs ssh mysql
-RUN cd /app && npm install
+COPY . /app
 
-CMD mysql & sshd & npm start
+WORKDIR /app
+
+RUN npm install
+
+CMD ["npm", "start"]
